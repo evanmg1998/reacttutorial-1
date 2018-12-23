@@ -1,0 +1,93 @@
+
+Added ssh keys
+
+1)
+  open git bash and run the following commands to create an ssh key
+  ssh-keygen -t rsa -b 4096 -C "evan1998@gmail.com"
+ 
+
+  
+  318  ssh-add ~/.ssh/id_rsa
+  319  cd ~
+  320  cd .ssh
+  321  ls
+  322  ls -lta
+  323  cd
+  324  ls -ltar
+  325  cd .ssh
+  326  ls -ltar
+  327  cat known_hosts 
+  328  pwd
+  329  cd /c/users/Michael
+  330  cd .ssh
+  331  ls
+  332  history
+  333  ssh-add /c/users/Michael/.ssh/id_rsa
+  334  ls
+  335  cat id_rsa
+  336  ls
+  337  cat id_rsa.pub 
+  338  mb
+  339  cda
+  340  cd
+  341  cd devreactprojects/
+  342  cd reactTutorial-1/
+  343  ls
+  344  history
+  345  git clone git@github.com:evanmg1998/reacttutorial-1.git
+  346  ssh-agent -s
+  347  history
+  348  ssh-add /c/users/Michael/.ssh/id_rsa
+  349  ssh-add -l
+  350  ssh-agent -s
+  351  ssh-add /c/users/Michael/.ssh/id_rsa
+  352  ps -ef | grep ssh
+  353  cd
+  354  cd .ssh
+  355  ls
+  356  cp $BB/* .
+  357  ls -ltr
+  358  vi config
+  359  history | grep ssh
+  360  ssh-add ~/.ssh/id_rsa
+  361  cdb
+  362  cda
+  363  cdc
+  364  cd
+  365  cd devreactprojects/
+  366  cd reactTutorial-1/
+  367  ls
+  368  history | grep clone
+  369  git clone git@github.com:evanmg1998/reacttutorial-1.git
+  370  git pull
+  371  ls
+  372  cd reacttutorial-1/
+  373  git pull
+  374  ssh-add /c/devel/.ssh/id_rsa
+  375  ls
+  376  ma
+  377  cd ..
+  378  ls
+  379  cd ..
+  380  ls
+  381  ls -ltr
+  382  cd evantest/
+  383  ls
+  384  mine
+  385  cp package.json $AA
+  386  cp -rf src $AA
+  387  ls
+  388  ls public/
+  389  cp -rf public/ $AA
+  390  cda
+  391  ls
+  392  git add .
+  393  git status
+  394  git commit -m
+  395  git commit -m 'Basic tutorial commit'
+  396  git config --global user.email "evanmg1998@gmail.com"
+  397  git config --global user.name "Evan"
+  398  git commit -m 'Basic tutorial commit'
+  399  git push
+  400  vi gitNotes.txt
+  401  history >> gitNotes.txt 
