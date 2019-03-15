@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import './index.css';
-import { addArticle } from "../js/actions/index";
+import { selectSquare, changePlayer } from "../js/actions/index";
 
 
 function Square(props) {
@@ -15,24 +15,12 @@ function Square(props) {
 class Board extends React.Component {
   constructor(props) {
     super(props);
-    // No longer needed as the squares array is now on the props.
-    // this.state = {
-    //   squares: Array(9).fill(null),
-    //   xIsNext: true,    };
   }
 
 
   handleClick(i) {
-    this.props.addArticle({i});
-
-    // This logic moves to the reducer.
-    //
-    // const squares = this.state.squares.slice();
-    // squares[i] = this.state.xIsNext ? 'X' : 'O';
-    // this.setState({
-    //   squares: squares,
-    //   xIsNext: !this.state.xIsNext,
-    // });
+    this.props.selectSquare({square: i, value: (this.props.xIsNext ? 'X' : 'O')});
+    this.props.changePlayer();
   }
 
   renderSquare(i) {
@@ -100,7 +88,8 @@ class Board extends React.Component {
 
   function mapDispatchToProps(dispatch) {
     return {
-      addArticle: article => dispatch(addArticle(article))
+      selectSquare: arg => dispatch(selectSquare(arg)),
+      changePlayer: () => dispatch(changePlayer())
     };
   }
 
@@ -108,8 +97,8 @@ class Board extends React.Component {
   const mapStateToProps = state => {
     console.log('LOG-Board.jsx', state);
     return { 
-      squares: state.squares,
-      xIsNext: state.xIsNext   
+      squares: state.boardReducer.squares,
+      xIsNext: state.gameReducer.xIsNext   
     };
 ;
   };

@@ -1,2 +1,2 @@
-export const ADD_ARTICLE = "ADD_ARTICLE";
 export const SELECT_SQUARE= "SELECT_SQUARE";
+export const CHANGE_PLAYER= "CHANGE_PLAYER";
